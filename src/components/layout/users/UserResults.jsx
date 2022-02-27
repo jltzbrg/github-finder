@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Spinner from '../Spinner'
 
 export default function UserResults() {
   const [users, setUsers] = useState([])
@@ -14,7 +15,9 @@ export default function UserResults() {
         Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
       },
     })
+
     const data = await response.json()
+
     setUsers(data)
     setLoading(false)
   }
@@ -27,6 +30,6 @@ export default function UserResults() {
       </div>
     )
   } else {
-    return <h3>Loading...</h3>
+    return <Spinner />
   }
 }
