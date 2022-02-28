@@ -35,15 +35,17 @@ export default function User() {
   }
   return (
     <>
+      {/* SEARCH Button */}
       <div className='w-full mx-auto lg:w-10/12'>
         <div className='mb-4'>
           <Link to='/' className='btn btn-ghost'>
             Back To Search
           </Link>
         </div>
+        {/* Card  */}
         <div className='grid grid-cols-1 mb-8 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 md:gap-8'>
           <div className='mb-6 custom-card-image md:mb-0'>
-            <div className='rounded-lg shadow-xl card-image-full'>
+            <div className='rounded-lg shadow-xl card image-full'>
               <figure>
                 <img src={avatar_url} alt='Profile' />
               </figure>
@@ -53,25 +55,26 @@ export default function User() {
               </div>
             </div>
           </div>
-        </div>
-        <div className='col-span-2'>
-          <div className='mb-6'>
-            <h1 className='text-3xl card-title'>
-              {name}
-              <div className='ml-2 mr-1 badge badge-success'>{type}</div>
-              {hireable && (
-                <div className='mx-1 badge badge-info'>Hireable</div>
-              )}
-            </h1>
-            <p>{bio}</p>
-            <div className='mt-4 card-actions'>
-              <a
-                href={html_url}
-                target='_blank'
-                rel='noreferrer'
-                className='btn btn-outline'>
-                Visit Github Profile
-              </a>
+
+          <div className='col-span-2'>
+            <div className='mb-6'>
+              <h1 className='text-3xl card-title'>
+                {name}
+                <div className='ml-2 mr-1 badge badge-success'>{type}</div>
+                {hireable && (
+                  <div className='mx-1 badge badge-info'>Hireable</div>
+                )}
+              </h1>
+              <p>{bio}</p>
+              <div className='mt-4 card-actions'>
+                <a
+                  href={html_url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='btn btn-outline'>
+                  Visit Github Profile
+                </a>
+              </div>
             </div>
           </div>
         </div>
