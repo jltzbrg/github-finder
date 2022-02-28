@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 export default function UserItem({ user: { login, avatar_url } }) {
   return (
-    <div className='card shadow-md compact side bg-base-100'>
+    <div className='shadow-md card compact side bg-base-100'>
       <div className='flex-row items-center space-x-4 card-body'></div>
       <div>
         <div className='avatar'>
@@ -14,7 +14,7 @@ export default function UserItem({ user: { login, avatar_url } }) {
       <div>
         <div className='card-title'>{login}</div>
         <Link
-          to={`/users/${login}`}
+          to={`/user/${login}`}
           className='text-base-content text-opacity-40'>
           Visit Profile
         </Link>
